@@ -1,7 +1,7 @@
 # Site settings
-title: Paper Theme
+title: Brodybits
 description: > # this means to ignore newlines until "baseurl:"
-  A gentle theme for Jekyll utilising material design.
+  Freelancer in rapid development of enterprise mobile applications.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
 
@@ -18,10 +18,10 @@ disqus: # add disqus shortname here
 # add your appropriate info here
 author: # your name
 bio:    # your bio
-email:
+email: brodybits@litehelpers.net
 email_md5: # md5 hash of your email
-twitter_username:
-github_username:
+twitter_username: brodybits
+github_username: brodybits
 
 # Theming options
 # These settings are mandatory.
