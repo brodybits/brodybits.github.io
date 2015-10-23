@@ -1,7 +1,7 @@
 # Site settings
 title: Brodybits
 description: > # this means to ignore newlines until "baseurl:"
-  Freelancer in rapid development of enterprise mobile applications.
+  Freelancer in rapid development of enterprise mobile applications in multiple languages.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site you most probably don't need to set it
 
