@@ -213,3 +213,7 @@ Then use the `cordova run` command, for example:
 {% highlight bash %}
 cordova run android
 {% endhighlight %}
+
+## Sample project
+
+A project with the program working is published at [@brodybits/cordova-sqlite-with-jquery-ajax-api-demo](https://github.com/brodybits/cordova-sqlite-with-jquery-ajax-api-demo).
