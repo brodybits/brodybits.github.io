@@ -1,5 +1,5 @@
 # Site settings
-title: Brodybits
+title: '@brodybits'
 description: > # this means to ignore newlines until "baseurl:"
   Freelancer in rapid development of enterprise mobile applications in multiple languages.
 baseurl: "/" # the subpath of your site, e.g. /blog/
