@@ -75,11 +75,15 @@ cordova plugin add cordova-sqlite-storage
 
 As a result, you *should* have a Cordova project that has logging enabled, [Cordova-sqlite-storage plugin](https://github.com/litehelpers/Cordova-sqlite-storage) installed, and multi-domain "whitelisting" enabled.
 
-## Fix Content-Security-Policy meta tag
+## UPDATED: Content-Security-Policy meta tag
 
 The credit for this section goes to the [accepted answer](http://stackoverflow.com/a/31714491) to [this Stack Overflow question](http://stackoverflow.com/questions/31506957/ajax-call-on-cordova-ios-securityerror-dom-exception-18), at least for iOS.
 
-It took me 2-3 hours of searching, trial, and error last week to discover this one. As of this writing, the Cordova default project template has a limited `Content-Security-Policy` setting in the meta tag. Please fix the `Content-Security-Policy` meta tag in `www/index.html` according to [the accepted answer](http://stackoverflow.com/a/31714491):
+It took me 2-3 hours of searching, trial, and error last week to discover this one. As of this writing, the Cordova default project template has a limited `Content-Security-Policy` setting in the meta tag. This will block queries to most domains.
+
+### Easy solution
+
+Fix the `Content-Security-Policy` meta tag in `www/index.html` according to [the accepted answer](http://stackoverflow.com/a/31714491):
 
 <!-- ref: http://html5doctor.com/cite-and-blockquote-reloaded/ -->
 <div style="padding-left: 40px; overflow-x: auto"> <!-- blockquote -->
@@ -95,6 +99,8 @@ use the code below to enable all requests
 <!-- NOTE: no formal "cite" here due to problems with kramdown -->
 </div>
 <!-- (*) -->
+
+**WARNING:** This is extremely insecure and should only be considered for a limited test application. Please follow the official documentation to configure the `Content-Security-Policy` meta tag correctly.
 
 ## Install JQuery
 
