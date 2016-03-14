@@ -35,3 +35,19 @@ In summary:
 - Run gpedit.msc from an Administrator command prompt
 - In Local Group Policy Editor: follow Local Computer Policy => Computer Configuration => Administrative Templates => Windows Components => App Package Deployment
 - Set "Allows development of Windows Store apps and installing them from an integrated development environment (IDE)" and "Allow all trusted apps to install" to Enabled
+
+**NOTE:** This was easy for a Javascript app since there is no need to specify the platform.
+
+## Further testing
+
+### Running a C++ project on a Windows 10 mobile device
+
+In this case the CPU architecture **must** be explicitly set. In Visual Studio 2015 it *should* be good enough to set it in the toolbar (it may be necessary to set the CPU architecure in the Configuration Manager in Visual Studio 2012/2013).
+
+**IMPORTANT:** The project *must* be run on "Device" and *not* "Remote Machine".
+
+### Running a Cordova project
+
+I was able to create a Cordova project, add `cordova-plugin-dialogs`, and test [cordova-sms-plugin pull request #72](https://github.com/cordova-sms/cordova-sms-plugin/pull/72) on my Windows 10 mobile.
+
+The one issue is that Visual Studio Express 2015 marks the Windows 8.1 and Windows Phone 8.1 build projects as "incompatible". I was able to run the same project as a Windows Phone 8.1 project using Visual Studio Express 2013. In addition, I was able to run a WP8 build on my Windows 10 mobile using Visual Studio 2013.
