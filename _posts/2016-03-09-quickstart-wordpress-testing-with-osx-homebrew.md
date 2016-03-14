@@ -6,7 +6,39 @@ categories: wordpress osx homebrew
 
 Here is a quickstart procedure for testing WordPress with OSX Homebrew. This procedure needs a recent version of PHP with `php-cli` and MySQL to be installed as described below. In addition, this procedure uses Node.js with npm to run WordPress for testing.
 
-The Apache `httpd` is *not* included due to its level complexity. WordPress unfortunately requires MySQL by default installation, and there is no easy workaround.
+The Apache `httpd` is *not* included due to its level complexity. WordPress unfortunately requires MySQL by default installation~~, and there is no easy workaround~~.
+
+**UPDATE:** The author discovered <https://github.com/enricodeleo/wpacked> which has a version of WordPress working with the [SQLite Integration plugin](https://wordpress.org/plugins/sqlite-integration/)
+
+# UPDATE: WordPress with SQLite instead of MySQL
+
+Based on: <https://github.com/enricodeleo/wpacked>
+
+THANKS to: <http://dogwood.skr.jp/wordpress/sqlite-integration/>
+
+## Recommended packages
+
+Recent versions of PHP and PHP composer.
+
+To install PHP: `brew install php70` (will also install `jpeg`, `unixodbc`, and `openssl`)
+
+To install PHP Composer: `brew install composer`
+
+## Quick usage
+
+Clone <https://github.com/enricodeleo/wpacked>: `git clone https://github.com/enricodeleo/wpacked`
+
+Within the `wpacked` clone (`cd wpacked`):
+
+- Check that `composer.json` points to <https://wpackagist.org> and **not** <http://wpackagist.org> (outstanding pull request at: <https://github.com/enricodeleo/wpacked/pull/1>)
+- install the dependencies: `composer install`
+- Create `.env` from `.env.example`: `cp .env.example .env` (will need to edit to configure security)
+
+Then run in PHP: `php -S localhost:8000 -t app`
+
+Now you can set it up from the web page and go.
+
+# WordPress installation with MySQL
 
 ## Recommended packages
 
